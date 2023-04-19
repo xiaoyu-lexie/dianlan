@@ -1,26 +1,101 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+.App {
+  width: 100vw;
+  height: 100vh;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-* {
-  box-sizing: border-box;
+.carouselContainer {
+  position: relative;
+  background-repeat: no-repeat;
+
+  background-position: 0% 0%;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.cerContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  border-style: solid;
+  border-color: red;
+  border-width: 5px;
+  justify-content: space-between;
+  margin-bottom: 20%;
+}
+
+.introContainer {
+  width: 45%;
+  height: 55%;
+  border-style: solid;
+  border-color: blue;
+  border-width: 5px;
+  color: rgb(3, 80, 127);
+  display: flex;
+  position: absolute;
+  right: 2%;
+}
+
+.sectionContainer {
+  width: 90%;
+
+  margin-top: 5vh;
+
+  border-style: solid;
+  border-color: rgb(144, 32, 126);
+  border-width: 5px;
+}
+
+.profileContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* justify-content: flex-end; */
+  border-style: solid;
+  border-color: rgb(132, 252, 140);
+  border-width: 5px;
+}
+
+.profileContentContainer {
+  width: 600px;
+  /* flex: 1; */
+  height: 30vh;
+  overflow: scroll;
+  border-style: solid;
+  border-color: blue;
+  border-width: 5px;
+}
+
+.facContainer {
+  width: 40%;
+}
+
+/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+@media screen and (min-width: 601px) {
+  #contacts {
+    font-size: 1.8rem;
+    line-height: 0.6em;
   }
-  body {
-    color: white;
-    background: black;
+  .carouselContainer {
+    height: 70vh;
+    background-size: 100% 120%;
+  }
+}
+
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+  #contacts {
+    font-size: 0.7em;
+    line-height: 0.6em;
+  }
+
+  .carouselContainer {
+    height: 30vh;
+    background-size: 100% 115%;
   }
 }
